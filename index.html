@@ -1,0 +1,567 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>אנגלית 4 יחידות</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Rubik:wght@600;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: sticky tab bar over one calm column; a big yellow-marked "4" opens the home view, everything else is quiet. */
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --fg:#14202B; --muted:#56657A; --line:#D8DFE8;
+  --accent:#1F4FD8; --accent-fg:#FFFFFF; --mark:#FFD84D; --mark-fg:#14202B;
+  --good:#12805C; --good-bg:#E3F5EE; --bad:#C2362B; --bad-bg:#FBE9E7; --soft:#E9EEF9;
+  --font-ui:'Heebo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --font-display:'Rubik','Heebo',system-ui,Arial,sans-serif;
+  --font-en:'Source Serif 4',Georgia,'Times New Roman',serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1620; --surface:#16212E; --fg:#E8EEF5; --muted:#9AA9BC; --line:#2A3748;
+    --accent:#7C9CFF; --accent-fg:#0E1620; --good:#4CD3A1; --good-bg:#11332A;
+    --bad:#FF8A7E; --bad-bg:#3A1F1C; --soft:#1B2A44; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1620; --surface:#16212E; --fg:#E8EEF5; --muted:#9AA9BC; --line:#2A3748;
+  --accent:#7C9CFF; --accent-fg:#0E1620; --good:#4CD3A1; --good-bg:#11332A;
+  --bad:#FF8A7E; --bad-bg:#3A1F1C; --soft:#1B2A44; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:16px;line-height:1.6;}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main.wrap{padding-block:28px 64px}
+h1,h2,h3{font-family:var(--font-display);line-height:1.2;text-wrap:balance;margin:0}
+h2{font-size:1.6rem;font-weight:800}
+h3{font-size:1.15rem;font-weight:600}
+p{margin:0}
+.en{font-family:var(--font-en);direction:ltr;unicode-bidi:isolate}
+.muted{color:var(--muted)}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--surface);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:12px;overflow-x:auto}
+.brand{font-family:var(--font-display);font-weight:800;white-space:nowrap;padding:12px 0;color:var(--fg);text-decoration:none}
+.brand b{background:var(--mark);color:var(--mark-fg);padding:0 7px;border-radius:4px;margin-inline-start:4px}
+.tabs{display:flex;gap:2px;margin-inline-start:auto}
+.tabs a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:14px 12px;font-weight:500;border-bottom:3px solid transparent}
+.tabs a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--accent)}
+
+section.view{display:flex;flex-direction:column;gap:22px}
+.lead{color:var(--muted);max-width:60ch}
+
+.hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap;padding-block:8px 6px}
+.bignum{font-family:var(--font-display);font-weight:800;font-size:clamp(7rem,28vw,11rem);line-height:.9;background:linear-gradient(transparent 62%,var(--mark) 62% 92%,transparent 92%);padding:0 10px}
+.hero h1{font-size:clamp(1.9rem,6vw,2.7rem);font-weight:800}
+.hero .txt{flex:1;min-width:240px;display:flex;flex-direction:column;gap:12px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+a.card{text-decoration:none;color:inherit}
+a.card:hover{border-color:var(--accent)}
+.card .tag{font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+.plain{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;min-width:0}
+
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+
+button{font:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 16px;border-radius:8px;font-weight:500}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:7px 14px;border-radius:99px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+
+/* flashcard */
+.flash{width:100%;min-height:240px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;color:var(--fg)}
+.flash .w{font-family:var(--font-en);font-size:2.4rem;font-weight:600;direction:ltr}
+.flash .he{font-family:var(--font-display);font-size:1.8rem;font-weight:600}
+.flash .ex{font-family:var(--font-en);font-style:italic;color:var(--muted);direction:ltr;max-width:44ch}
+.flash .hint{font-size:.85rem;color:var(--muted)}
+
+/* quiz and exercises */
+.q{display:flex;flex-direction:column;gap:12px}
+.q .stem{font-size:1.05rem}
+.opts{display:grid;gap:8px}
+.opt{text-align:start;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:10px 14px;border-radius:8px}
+.opt.en-o{font-family:var(--font-en);direction:ltr;text-align:left}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.ok{background:var(--good-bg);border-color:var(--good);color:var(--fg)}
+.opt.no{background:var(--bad-bg);border-color:var(--bad);color:var(--fg)}
+.opt:disabled{cursor:default}
+.why{font-size:.92rem;color:var(--muted);border-inline-start:3px solid var(--line);padding-inline-start:10px}
+.score{font-family:var(--font-display);font-weight:800;font-size:1.3rem}
+
+.rule{display:grid;grid-template-columns:minmax(110px,170px) 1fr;gap:6px 16px;padding-block:10px;border-top:1px solid var(--line)}
+.rule:first-of-type{border-top:0}
+.rule .f{font-family:var(--font-en);direction:ltr;text-align:left;font-weight:600}
+.rule .e{font-family:var(--font-en);direction:ltr;text-align:left;font-style:italic;color:var(--muted);grid-column:2}
+@media (max-width:520px){.rule{grid-template-columns:1fr}.rule .e{grid-column:1}}
+
+.passage{font-family:var(--font-en);direction:ltr;text-align:left;font-size:1.12rem;line-height:1.75;display:flex;flex-direction:column;gap:14px;max-width:62ch}
+.passage h3{font-family:var(--font-en);font-weight:600;font-size:1.5rem}
+textarea{width:100%;min-height:150px;font:inherit;font-family:var(--font-en);direction:ltr;text-align:left;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:12px;resize:vertical}
+.model{background:var(--soft);border-radius:8px;padding:12px 14px;font-family:var(--font-en);direction:ltr;text-align:left}
+table{border-collapse:collapse;width:100%}
+th,td{padding:8px 10px;border-top:1px solid var(--line);text-align:start;vertical-align:top}
+.tscroll{overflow-x:auto}
+.tscroll .en{white-space:nowrap}
+.check{display:flex;gap:10px;align-items:flex-start;padding:6px 0}
+.check input{width:20px;height:20px;margin-top:4px;accent-color:var(--accent)}
+.count{font-variant-numeric:tabular-nums}
+.sample{font-family:var(--font-en);direction:ltr;text-align:left;display:flex;flex-direction:column;gap:10px}
+ol.plan{margin:0;padding-inline-start:22px;display:flex;flex-direction:column;gap:6px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div id="app" dir="rtl" lang="he">
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#home">אנגלית <b>4</b> יחידות</a>
+  <div class="tabs" id="tabs">
+    <a href="#home" data-v="home">בית</a>
+    <a href="#vocab" data-v="vocab">אוצר מילים</a>
+    <a href="#grammar" data-v="grammar">דקדוק</a>
+    <a href="#reading" data-v="reading">הבנת הנקרא</a>
+    <a href="#writing" data-v="writing">כתיבה</a>
+  </div>
+</div></nav>
+
+<main class="wrap">
+
+<!-- HOME -->
+<section class="view" id="v-home">
+  <div class="hero">
+    <div class="bignum" aria-hidden="true">4</div>
+    <div class="txt">
+      <h1>להתכונן לבגרות באנגלית, צעד אחר צעד</h1>
+      <p class="lead">חומרי לימוד ותרגול לכיתה יב ברמת 4 יחידות: אוצר מילים אקדמי, דקדוק, קטע קריאה עם שאלות וכתיבת חיבור. הכול בעמוד אחד, ואפשר לתרגל גם מהטלפון.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <a class="card" href="#vocab"><span class="tag">28 מילים</span><h3>אוצר מילים</h3><p class="muted">כרטיסיות הפיכה ומבדק קצר. המילים שסימנתם כידועות נשמרות בדפדפן.</p>
+      <div class="bar" aria-hidden="true"><i id="home-bar"></i></div><p class="muted" id="home-prog"></p></a>
+    <a class="card" href="#grammar"><span class="tag">6 נושאים</span><h3>דקדוק</h3><p class="muted">הסבר קצר, נוסחה ותרגול עם משוב מיידי: תנאי, סביל, דיבור עקיף ועוד.</p></a>
+    <a class="card" href="#reading"><span class="tag">קטע + 5 שאלות</span><h3>הבנת הנקרא</h3><p class="muted">קטע תרגול מקורי בסגנון הבחינה, עם שאלות אמריקאיות ושאלה פתוחה.</p></a>
+    <a class="card" href="#writing"><span class="tag">כתיבה</span><h3>כתיבת חיבור</h3><p class="muted">מבנה, מילות קישור, חיבור לדוגמה, ספירת מילים ורשימת בדיקה.</p></a>
+  </div>
+  <div class="plain">
+    <h3>תוכנית לימוד לשבוע</h3>
+    <ol class="plan" style="margin-top:10px">
+      <li>יום ראשון: 10 מילים חדשות בכרטיסיות, ומבדק קצר בסוף.</li>
+      <li>יום שני: נושא דקדוק אחד, קריאת ההסבר ופתרון כל התרגילים.</li>
+      <li>יום שלישי: קטע קריאה. קראו פעם אחת, ענו, ואז חזרו לטקסט כדי לבדוק.</li>
+      <li>יום רביעי: חזרה על מילים שסומנו כלא ידועות.</li>
+      <li>יום חמישי: כתיבת חיבור מלא בזמן קצוב, ואחריו רשימת הבדיקה.</li>
+    </ol>
+    <p class="muted" style="margin-top:12px">האתר הוא חומר עזר לתרגול. מבנה הבחינה, משקלי השאלות והיקף הכתיבה משתנים בין מועדים, לכן כדאי לבדוק בהנחיות העדכניות של משרד החינוך ושל המורה.</p>
+  </div>
+</section>
+
+<!-- VOCAB -->
+<section class="view" id="v-vocab" hidden>
+  <div><h2>אוצר מילים</h2><p class="lead">לחצו על הכרטיס כדי להפוך אותו. סמנו אם ידעתם את המילה, וחזרו רק על מה שעוד לא.</p></div>
+  <div class="row">
+    <div class="seg" role="group" aria-label="מצב תרגול">
+      <button class="chip" id="m-cards" aria-pressed="true">כרטיסיות</button>
+      <button class="chip" id="m-quiz" aria-pressed="false">מבדק</button>
+    </div>
+  </div>
+  <div id="cards-box" class="view">
+    <div class="row">
+      <label class="row" style="gap:8px"><input type="checkbox" id="only-unknown"> רק מילים שעוד לא ידעתי</label>
+      <button class="btn" id="shuffle">ערבוב</button>
+      <button class="btn" id="reset-known">איפוס התקדמות</button>
+    </div>
+    <p class="muted count" id="card-count"></p>
+    <button class="flash" id="flash" aria-live="polite"></button>
+    <div class="row">
+      <button class="btn" id="prev">הקודמת</button>
+      <button class="btn primary" id="know">ידעתי</button>
+      <button class="btn" id="dontknow">עוד לא</button>
+      <button class="btn" id="next">הבאה</button>
+    </div>
+  </div>
+  <div id="quiz-box" class="view" hidden></div>
+</section>
+
+<!-- GRAMMAR -->
+<section class="view" id="v-grammar" hidden>
+  <div><h2>דקדוק</h2><p class="lead">בחרו נושא, קראו את הכלל ופתרו. לאחר כל תשובה מופיע הסבר קצר.</p></div>
+  <div class="seg" id="g-chips" role="group" aria-label="נושאי דקדוק"></div>
+  <div id="g-body" class="view"></div>
+</section>
+
+<!-- READING -->
+<section class="view" id="v-reading" hidden>
+  <div><h2>הבנת הנקרא</h2><p class="lead">טקסט תרגול מקורי שנכתב לאתר, ואינו קטע מבחינה אמיתית. קראו, ענו, ובדקו.</p></div>
+  <div class="plain"><div class="passage" id="passage"></div></div>
+  <div id="r-qs" class="view"></div>
+  <div class="plain row" id="r-score" hidden></div>
+</section>
+
+<!-- WRITING -->
+<section class="view" id="v-writing" hidden>
+  <div><h2>כתיבת חיבור</h2><p class="lead">חיבור טוב הוא חיבור מסודר: עמדה ברורה, נימוקים עם דוגמאות, והתייחסות לצד השני.</p></div>
+
+  <div class="plain">
+    <h3>משימה לדוגמה</h3>
+    <p class="en" style="margin-top:8px">Some schools ban mobile phones during the school day. Write an article for your school website (about 120–150 words) giving your opinion.</p>
+    <p class="muted" style="margin-top:8px">בבחינה אמיתית יש להקפיד על מספר המילים ועל סוג הטקסט שמופיעים בהנחיות.</p>
+  </div>
+
+  <div class="plain">
+    <h3>מבנה מומלץ</h3>
+    <div style="margin-top:8px">
+      <div class="rule"><div><b>פתיחה</b></div><div>כותרת קצרה ומשפט אחד שמציג את העמדה שלכם.</div><div class="e">In my opinion, schools should…</div></div>
+      <div class="rule"><div><b>נימוק ראשון</b></div><div>טענה אחת עם הסבר או דוגמה.</div><div class="e">First of all, … For example, …</div></div>
+      <div class="rule"><div><b>נימוק שני</b></div><div>טענה נוספת, בפסקה נפרדת.</div><div class="e">Moreover, … As a result, …</div></div>
+      <div class="rule"><div><b>צד שני</b></div><div>מציגים טענה נגדית ומשיבים עליה.</div><div class="e">Some people claim that… However, …</div></div>
+      <div class="rule"><div><b>סיכום</b></div><div>חוזרים לעמדה במילים אחרות, בלי רעיונות חדשים.</div><div class="e">To sum up, …</div></div>
+    </div>
+  </div>
+
+  <div class="plain">
+    <h3>מילות קישור</h3>
+    <div class="tscroll" style="margin-top:8px"><table>
+      <tr><th>תפקיד</th><th>ביטויים</th></tr>
+      <tr><td>הוספה</td><td class="en">moreover, in addition, furthermore, besides</td></tr>
+      <tr><td>ניגוד</td><td class="en">however, on the other hand, although, despite</td></tr>
+      <tr><td>סיבה ותוצאה</td><td class="en">because of, as a result, therefore, so</td></tr>
+      <tr><td>דוגמה</td><td class="en">for example, for instance, such as</td></tr>
+      <tr><td>סדר</td><td class="en">first of all, then, finally</td></tr>
+      <tr><td>סיכום</td><td class="en">to sum up, in conclusion, all in all</td></tr>
+    </table></div>
+  </div>
+
+  <div class="plain">
+    <h3>חיבור לדוגמה</h3>
+    <div class="sample" style="margin-top:10px" id="sample-text">
+      <h3 class="en">Should Phones Be Banned at School?</h3>
+      <p>In my opinion, schools should limit phone use during lessons, but not ban phones completely.</p>
+      <p>First of all, phones distract students. Even a single notification can make us lose the thread of a lesson, and it takes time to concentrate again. Moreover, breaks are a chance to talk face to face. When everyone looks at a screen, friendships suffer.</p>
+      <p>On the other hand, some people claim that phones are useful learning tools. I agree that they can be, for example when we look up a word or check a source. However, teachers can allow this only when it is needed for the task.</p>
+      <p>To sum up, a clear rule that keeps phones in bags during lessons would help us learn without taking away something important to us.</p>
+    </div>
+  </div>
+
+  <div class="plain view">
+    <h3>הטיוטה שלכם</h3>
+    <textarea id="draft" placeholder="Write your article here…" aria-label="טיוטת חיבור"></textarea>
+    <div class="row"><span class="count">מילים: <b id="wc">0</b></span><span class="muted">יעד: 120–150</span><span id="wc-note" class="muted"></span></div>
+  </div>
+
+  <div class="plain">
+    <h3>רשימת בדיקה</h3>
+    <div style="margin-top:6px" id="checklist"></div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+(function(){
+var WORDS=[
+["ambiguous","דו-משמעי","The instructions were ambiguous, so we asked for clarification."],
+["beneficial","מועיל","Regular exercise is beneficial for both body and mind."],
+["contribute","לתרום","Everyone in the group should contribute ideas."],
+["crucial","קריטי, חיוני","Sleep is crucial before an important exam."],
+["demand","דרישה, ביקוש","There is a growing demand for online courses."],
+["despite","למרות","Despite the rain, the match went ahead."],
+["enhance","לשפר, להעצים","Music can enhance your mood."],
+["evidence","הוכחה, ראיות","There is no evidence that the story is true."],
+["flexible","גמיש","A flexible schedule helped her balance work and study."],
+["impact","השפעה","Social media has a strong impact on teenagers."],
+["isolate","לבודד","The illness forced him to isolate himself for a week."],
+["maintain","לשמור על, לתחזק","It is hard to maintain a healthy diet when you are busy."],
+["obstacle","מכשול","Fear of failure is the biggest obstacle for many people."],
+["overcome","להתגבר על","She overcame her shyness and joined the debate team."],
+["potential","פוטנציאל","The young player has great potential."],
+["reliable","אמין","Always check that your source is reliable."],
+["significant","משמעותי","There was a significant rise in prices last year."],
+["struggle","להיאבק, מאבק","Many students struggle with time management."],
+["tend to","נוטה ל","Teenagers tend to stay up late."],
+["vulnerable","פגיע","Young children are vulnerable to online risks."],
+["adapt","להסתגל","It took him a while to adapt to the new school."],
+["awareness","מודעות","The campaign raised awareness of climate change."],
+["consequence","תוצאה","Every decision has a consequence."],
+["controversial","שנוי במחלוקת","The new law is highly controversial."],
+["insight","תובנה","The book gives a deep insight into teenage life."],
+["reluctant","מהסס, לא מוכן","He was reluctant to speak in front of the class."],
+["sustain","לקיים, להמשיך","It is difficult to sustain interest in a boring topic."],
+["widespread","נפוץ","Online shopping is now widespread."]
+];
+
+var GRAMMAR=[
+{id:"cond",name:"משפטי תנאי",en:"Conditionals",rules:[
+ ["Type 1: אפשרי","If + present, will + verb","If it rains, we will stay home."],
+ ["Type 2: דמיוני בהווה","If + past simple, would + verb","If I had more time, I would travel."],
+ ["Type 3: דמיוני בעבר","If + past perfect, would have + V3","If she had studied, she would have passed."],
+ ["unless","unless = if … not","Unless you hurry, you will be late."]],
+ qs:[
+ ["If I ___ more time, I would learn another language.",["have","had","would have"],1,"תנאי מסוג 2: if + past simple."],
+ ["If she had studied harder, she ___ the exam.",["would pass","passed","would have passed"],2,"תנאי מסוג 3: would have + V3."],
+ ["___ you leave now, you will miss the bus.",["Unless","If not","Whether"],0,"unless משמעותו if … not, ולכן לא באה אחריו שלילה כפולה."]]},
+{id:"passive",name:"סביל",en:"Passive voice",rules:[
+ ["Present simple","am / is / are + V3","English is spoken all over the world."],
+ ["Past simple","was / were + V3","The report was written last week."],
+ ["Future","will be + V3","The bridge will be opened next year."],
+ ["Present perfect","has / have been + V3","The window has been repaired."]],
+ qs:[
+ ["The report ___ by the team last week.",["wrote","was written","has written"],1,"עבר פשוט סביל: was / were + V3."],
+ ["English ___ all over the world.",["speaks","is spoken","is speaking"],1,"הנושא (English) מקבל את הפעולה, ולכן סביל בהווה."],
+ ["The new bridge ___ next year.",["will be opened","will open","is opened"],0,"עתיד סביל: will be + V3."]]},
+{id:"reported",name:"דיבור עקיף",en:"Reported speech",rules:[
+ ["הזזה אחורה בזמן","present → past, past → past perfect","\"I am tired.\" → She said she was tired."],
+ ["will → would","","\"I will call.\" → He said he would call."],
+ ["ביטויי זמן","tomorrow → the next day, yesterday → the day before","He said he would come the next day."],
+ ["שאלות","if / whether + סדר משפט רגיל","\"Have you finished?\" → She asked if I had finished."]],
+ qs:[
+ ["\"I am tired,\" she said. → She said that she ___ tired.",["is","was","has been"],1,"present simple הופך ל-past simple בדיבור עקיף."],
+ ["\"I'll call you tomorrow,\" he said. → He said he would call me ___.",["tomorrow","the next day","yesterday"],1,"tomorrow הופך ל-the next day."],
+ ["\"Have you finished?\" she asked. → She asked me if I ___ finished.",["have","had","did"],1,"present perfect הופך ל-past perfect."]]},
+{id:"relative",name:"משפטי זיקה",en:"Relative clauses",rules:[
+ ["who","לאנשים","The woman who lives next door is a doctor."],
+ ["which / that","לחפצים ולדברים","The book that I bought was expensive."],
+ ["whose","שייכות","This is the girl whose bag was stolen."],
+ ["פסוקית עם פסיקים","מוסיפה מידע, ואין בה that","My brother, who lives in Haifa, is a teacher."]],
+ qs:[
+ ["The woman ___ lives next door is a doctor.",["which","who","whose"],1,"who מתייחס לאדם בתפקיד נושא."],
+ ["This is the book ___ cover I love.",["that","which","whose"],2,"whose מבטא שייכות: the cover of the book."],
+ ["My brother, ___ lives in Haifa, is a teacher.",["who","that","which"],0,"בין פסיקים לא משתמשים ב-that, ולאדם מתאים who."]]},
+{id:"wish",name:"משאלות",en:"Wish and if only",rules:[
+ ["משאלה בהווה","wish + past simple","I wish I had more free time."],
+ ["חרטה על העבר","wish + past perfect","She wishes she had studied abroad."],
+ ["תלונה על התנהגות","wish + would","I wish it would stop raining."]],
+ qs:[
+ ["I wish I ___ more free time.",["have","had","would have"],1,"משאלה על מצב בהווה: wish + past simple."],
+ ["She wishes she ___ abroad last year.",["studied","had studied","would study"],1,"חרטה על העבר: wish + past perfect."],
+ ["I wish it ___ raining. I want to go out.",["stops","stopped","would stop"],2,"wish + would משמש לתלונה על משהו מטריד שאינו בשליטתנו."]]},
+{id:"modals",name:"הסקה עם מודלים",en:"Modals of deduction",rules:[
+ ["must","בטוח שכן","He has been working since dawn. He must be exhausted."],
+ ["can't","בטוח שלא","It can't be Dan at the door. He is abroad."],
+ ["might / may / could","אולי","I might have left my keys at school."],
+ ["עבר","modal + have + V3","She must have forgotten."]],
+ qs:[
+ ["The lights are off. They ___ be asleep.",["must","can't","should"],0,"המסקנה כמעט וודאית, ולכן must."],
+ ["It ___ be Dan at the door. He is abroad.",["must","can't","might"],1,"יש מידע שמוכיח שזה לא ייתכן, ולכן can't."],
+ ["I can't find my keys. I ___ have left them at school.",["might","can't","must not"],0,"אנחנו לא בטוחים, ולכן might + have + V3."]]}
+];
+
+var PASSAGE=[
+"The Price of Always Being Online",
+"Few of us remember the last time we spent a whole afternoon without checking a phone. Smartphones have put information and friends at our fingertips, and most teenagers say they cannot imagine life without them. Yet a growing number of researchers argue that constant connection comes at a price.",
+"One study followed two groups of students during a month of exam preparation. The first group kept their phones on the desk while studying; the second left theirs in another room. Those without phones nearby finished their tasks faster and remembered more. Even when students did not touch their phones, the researchers say, part of their attention stayed with them, waiting for the next message.",
+"This does not mean that technology is the enemy. Used wisely, phones help us learn languages, find reliable sources and keep in touch with relatives abroad. The problem begins when we allow notifications to decide when we work, rest or talk. Psychologists suggest simple habits: turn off unnecessary alerts, set fixed times for checking messages, and keep the bedroom a screen-free zone.",
+"Such changes are not easy, and many people feel anxious at first. However, those who try them often report better sleep and a clearer head. In the end, the goal is not to give up our devices but to stay in control of them."
+];
+var RQS=[
+{q:"What is the main idea of the text?",o:["Phones should be banned in schools.","Constant phone use can harm concentration, so it should be managed.","Researchers dislike technology.","Students study better when phones are close."],a:1,w:"הכותרת והפסקה האחרונה מדגישות שליטה בשימוש, לא ויתור על הטלפון."},
+{q:"What did the researchers find?",o:["Students with phones nearby remembered more.","Students without phones nearby worked faster and remembered more.","Phones made no difference.","Students touched their phones more often."],a:1,w:"הפסקה השנייה: מי שהשאיר את הטלפון בחדר אחר סיים מהר יותר וזכר יותר."},
+{q:"In the text, the phrase reliable sources means sources that are…",o:["trustworthy","expensive","brand new","popular"],a:0,w:"reliable = אמין, כמו trustworthy."},
+{q:"Which of these is NOT suggested by the psychologists?",o:["Turning off unnecessary alerts","Checking messages at fixed times","Keeping the bedroom free of screens","Deleting all social media accounts"],a:3,w:"שלוש ההצעות הראשונות מופיעות בפסקה השלישית. מחיקת כל החשבונות לא מוזכרת."},
+{open:true,q:"In your own words, explain what it means to stay in control of our devices (1–2 sentences).",m:"It means that we decide when and why to use our phones, instead of letting notifications and messages decide for us."}
+];
+
+var CHECK=[
+"כתבתי כותרת",
+"העמדה שלי ברורה כבר בפסקה הראשונה",
+"יש לפחות שני נימוקים, ולכל אחד דוגמה",
+"התייחסתי לדעה הנגדית",
+"השתמשתי במילות קישור מגוונות",
+"הפסקאות נפרדות והסיכום לא מוסיף רעיונות חדשים",
+"בדקתי זמנים, מבנה של סביל ותנאי, ואיות של מילים מוכרות",
+"מספר המילים מתאים להנחיות"
+];
+
+function $(s,r){return (r||document).querySelector(s)}
+function el(h){var d=document.createElement("div");d.innerHTML=h;return d.firstElementChild}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+
+/* storage helpers */
+var known={};
+try{var s=localStorage.getItem("e4-known");if(s){JSON.parse(s).forEach(function(w){known[w]=1})}}catch(e){}
+function saveKnown(){try{localStorage.setItem("e4-known",JSON.stringify(Object.keys(known)))}catch(e){}}
+function knownCount(){return Object.keys(known).length}
+function updateHome(){
+  var n=knownCount();
+  $("#home-bar").style.width=(n/WORDS.length*100)+"%";
+  $("#home-prog").textContent="סימנתם "+n+" מתוך "+WORDS.length+" מילים כידועות";
+}
+
+/* routing */
+var VIEWS=["home","vocab","grammar","reading","writing"];
+function route(){
+  var h=(location.hash||"#home").slice(1);
+  if(VIEWS.indexOf(h)<0)h="home";
+  VIEWS.forEach(function(v){
+    $("#v-"+v).hidden=(v!==h);
+    var a=$('#tabs a[data-v="'+v+'"]');
+    if(v===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+  });
+  if(h==="home")updateHome();
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",route);
+
+/* flashcards */
+var base=WORDS.slice(),idx=0,flipped=false,deck=[];
+function buildDeck(){
+  var only=$("#only-unknown").checked;
+  deck=only?base.filter(function(w){return !known[w[0]]}):base.slice();
+  if(idx>=deck.length)idx=0;
+}
+function drawCard(){
+  buildDeck();
+  var f=$("#flash");
+  $("#card-count").textContent=deck.length?("כרטיס "+(idx+1)+" מתוך "+deck.length+" · ידועות: "+knownCount()+" מתוך "+WORDS.length):"אין מילים להצגה. כל הכבוד!";
+  if(!deck.length){f.innerHTML='<span class="he">סיימתם את כל המילים</span>';return}
+  var w=deck[idx];
+  if(!flipped){
+    f.innerHTML='<span class="w">'+esc(w[0])+'</span><span class="hint">לחצו כדי לראות תרגום</span>'+(known[w[0]]?'<span class="hint">✓ סומנה כידועה</span>':'');
+  }else{
+    f.innerHTML='<span class="w">'+esc(w[0])+'</span><span class="he">'+esc(w[1])+'</span><span class="ex">'+esc(w[2])+'</span>';
+  }
+}
+$("#flash").addEventListener("click",function(){flipped=!flipped;drawCard()});
+$("#next").addEventListener("click",function(){idx=(idx+1)%Math.max(deck.length,1);flipped=false;drawCard()});
+$("#prev").addEventListener("click",function(){idx=(idx-1+deck.length)%Math.max(deck.length,1);flipped=false;drawCard()});
+$("#know").addEventListener("click",function(){if(!deck.length)return;known[deck[idx][0]]=1;saveKnown();flipped=false;drawCard();updateHome()});
+$("#dontknow").addEventListener("click",function(){if(!deck.length)return;delete known[deck[idx][0]];saveKnown();idx=(idx+1)%Math.max(deck.length,1);flipped=false;drawCard();updateHome()});
+$("#shuffle").addEventListener("click",function(){base=shuffle(base);idx=0;flipped=false;drawCard()});
+$("#only-unknown").addEventListener("change",function(){idx=0;flipped=false;drawCard()});
+$("#reset-known").addEventListener("click",function(){known={};saveKnown();idx=0;flipped=false;drawCard();updateHome()});
+
+/* vocab modes + quiz */
+function setMode(m){
+  $("#m-cards").setAttribute("aria-pressed",m==="cards");
+  $("#m-quiz").setAttribute("aria-pressed",m==="quiz");
+  $("#cards-box").hidden=(m!=="cards");
+  $("#quiz-box").hidden=(m!=="quiz");
+  if(m==="quiz")startQuiz();else drawCard();
+}
+$("#m-cards").addEventListener("click",function(){setMode("cards")});
+$("#m-quiz").addEventListener("click",function(){setMode("quiz")});
+
+var quiz=[],qi=0,qscore=0;
+function startQuiz(){
+  var pick=shuffle(WORDS).slice(0,10);
+  quiz=pick.map(function(w){
+    var others=shuffle(WORDS.filter(function(x){return x[0]!==w[0]})).slice(0,3).map(function(x){return x[1]});
+    var opts=shuffle([w[1]].concat(others));
+    return {w:w,opts:opts,a:opts.indexOf(w[1])};
+  });
+  qi=0;qscore=0;drawQuiz();
+}
+function drawQuiz(){
+  var box=$("#quiz-box");
+  if(qi>=quiz.length){
+    box.innerHTML='<div class="plain q"><span class="score">'+qscore+' מתוך '+quiz.length+'</span><p>'+(qscore>=8?"מצוין. אפשר לעבור לנושא הבא.":qscore>=5?"טוב. חזרו על המילים שפספסתם בכרטיסיות.":"כדאי לחזור על הכרטיסיות ולנסות שוב.")+'</p><div class="row"><button class="btn primary" id="again">מבדק חדש</button></div></div>';
+    $("#again").addEventListener("click",startQuiz);return;
+  }
+  var q=quiz[qi];
+  box.innerHTML='<div class="plain q"><p class="muted count">שאלה '+(qi+1)+' מתוך '+quiz.length+'</p><p class="stem">מה פירוש המילה <b class="en" style="font-size:1.4rem">'+esc(q.w[0])+'</b>?</p><div class="opts"></div><div id="fb"></div></div>';
+  var o=$(".opts",box);
+  q.opts.forEach(function(t,i){
+    var b=el('<button class="opt">'+esc(t)+'</button>');
+    b.addEventListener("click",function(){
+      var all=o.querySelectorAll(".opt");
+      all.forEach(function(x,j){x.disabled=true;if(j===q.a)x.classList.add("ok")});
+      if(i===q.a)qscore++;else b.classList.add("no");
+      $("#fb").innerHTML='<p class="why en">'+esc(q.w[2])+'</p><div class="row" style="margin-top:10px"><button class="btn primary" id="nq">'+(qi===quiz.length-1?"לתוצאה":"הבאה")+'</button></div>';
+      $("#nq").addEventListener("click",function(){qi++;drawQuiz()});
+    });
+    o.appendChild(b);
+  });
+}
+
+/* grammar */
+var curG=0;
+function drawG(){
+  var chips=$("#g-chips");chips.innerHTML="";
+  GRAMMAR.forEach(function(g,i){
+    var b=el('<button class="chip" aria-pressed="'+(i===curG)+'">'+esc(g.name)+'</button>');
+    b.addEventListener("click",function(){curG=i;drawG()});
+    chips.appendChild(b);
+  });
+  var g=GRAMMAR[curG],body=$("#g-body");
+  var rules=g.rules.map(function(r){
+    return '<div class="rule"><div><b>'+esc(r[0])+'</b></div><div class="f">'+esc(r[1])+'</div><div class="e">'+esc(r[2])+'</div></div>';
+  }).join("");
+  body.innerHTML='<div class="plain"><h3><span class="en">'+esc(g.en)+'</span> · '+esc(g.name)+'</h3><div style="margin-top:8px">'+rules+'</div></div><div id="g-qs" class="view"></div><div id="g-sc" class="muted count"></div>';
+  var done=0,right=0;
+  g.qs.forEach(function(q,qn){
+    var card=el('<div class="plain q"><p class="stem en">'+(qn+1)+'. '+esc(q[0])+'</p><div class="opts"></div><div class="fb"></div></div>');
+    var o=$(".opts",card);
+    q[1].forEach(function(t,i){
+      var b=el('<button class="opt en-o">'+esc(t)+'</button>');
+      b.addEventListener("click",function(){
+        o.querySelectorAll(".opt").forEach(function(x,j){x.disabled=true;if(j===q[2])x.classList.add("ok")});
+        if(i===q[2])right++;else b.classList.add("no");
+        $(".fb",card).innerHTML='<p class="why">'+esc(q[3])+'</p>';
+        done++;
+        $("#g-sc").textContent="נענו "+done+" מתוך "+g.qs.length+" · נכונות: "+right;
+      });
+      o.appendChild(b);
+    });
+    $("#g-qs").appendChild(card);
+  });
+}
+
+/* reading */
+function drawReading(){
+  var p=$("#passage");
+  p.innerHTML='<h3>'+esc(PASSAGE[0])+'</h3>'+PASSAGE.slice(1).map(function(t){return '<p>'+esc(t)+'</p>'}).join("");
+  var box=$("#r-qs");box.innerHTML="";
+  var answered=0,right=0,mcTotal=RQS.filter(function(q){return !q.open}).length;
+  RQS.forEach(function(q,n){
+    var card=el('<div class="plain q"><p class="stem en">'+(n+1)+'. '+esc(q.q)+'</p></div>');
+    if(q.open){
+      card.insertAdjacentHTML("beforeend",'<textarea id="open-a" aria-label="התשובה שלכם" style="min-height:90px"></textarea><div class="row"><button class="btn" id="show-m">הצגת תשובה לדוגמה</button></div><div id="open-m"></div>');
+      box.appendChild(card);
+      $("#show-m",card).addEventListener("click",function(){$("#open-m",card).innerHTML='<div class="model">'+esc(q.m)+'</div>'});
+      return;
+    }
+    var o=el('<div class="opts"></div>');
+    q.o.forEach(function(t,i){
+      var b=el('<button class="opt en-o">'+esc(t)+'</button>');
+      b.addEventListener("click",function(){
+        o.querySelectorAll(".opt").forEach(function(x,j){x.disabled=true;if(j===q.a)x.classList.add("ok")});
+        if(i===q.a)right++;else b.classList.add("no");
+        card.insertAdjacentHTML("beforeend",'<p class="why">'+esc(q.w)+'</p>');
+        answered++;
+        if(answered===mcTotal){
+          var sc=$("#r-score");sc.hidden=false;
+          sc.innerHTML='<span class="score">'+right+' מתוך '+mcTotal+'</span><span class="muted">בשאלות האמריקאיות</span>';
+        }
+      });
+      o.appendChild(b);
+    });
+    card.appendChild(o);box.appendChild(card);
+  });
+}
+
+/* writing */
+function drawWriting(){
+  var cl=$("#checklist");
+  CHECK.forEach(function(t,i){
+    cl.appendChild(el('<label class="check" for="c'+i+'"><input type="checkbox" id="c'+i+'"><span>'+esc(t)+'</span></label>'));
+  });
+  var ta=$("#draft");
+  try{var d=localStorage.getItem("e4-draft");if(d)ta.value=d}catch(e){}
+  function count(){
+    var t=ta.value.trim();var n=t?t.split(/\s+/).length:0;
+    $("#wc").textContent=n;
+    $("#wc-note").textContent=n===0?"":n<120?"עוד "+(120-n)+" מילים לפחות":n>150?"יותר מ-150, בדקו את ההנחיות":"בטווח";
+    try{localStorage.setItem("e4-draft",ta.value)}catch(e){}
+  }
+  ta.addEventListener("input",count);count();
+}
+
+drawG();drawReading();drawWriting();buildDeck();drawCard();updateHome();route();
+})();
+</script>
+
+</body></html>
